@@ -94,9 +94,12 @@ export default function Hero() {
 
       <div
         className="relative z-10 h-full flex flex-col justify-between"
-        style={{ padding: "120px var(--page-padding) 48px" }}
+        style={{
+          padding:
+            "clamp(88px, 14vw, 140px) var(--page-padding) clamp(28px, 5vw, 48px)",
+        }}
       >
-        <div className="flex items-start justify-between hero-marker">
+        <div className="flex items-start justify-between gap-4 hero-marker">
           <span className="marker text-[var(--kc3-ivory)]/70">
             Kenn · Rheinland-Pfalz
           </span>
@@ -107,8 +110,8 @@ export default function Hero() {
 
         <div className="max-w-[1400px]">
           <h1
-            className="font-medium tracking-[-0.065em] leading-[0.86]"
-            style={{ fontSize: "clamp(3.6rem, 12vw, 12rem)" }}
+            className="font-medium tracking-[-0.055em] md:tracking-[-0.065em] leading-[0.9] md:leading-[0.86]"
+            style={{ fontSize: "clamp(2.8rem, 13vw, 12rem)" }}
           >
             <span className="reveal-line hero-line">
               <span>Immobilien.</span>
@@ -122,9 +125,9 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 md:gap-6">
           <div className="hairline text-[var(--kc3-ivory)] hero-meta" />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
             <a
               href="#leistungen"
               className="hero-meta group transition-colors hover:text-[var(--kc3-accent)]"

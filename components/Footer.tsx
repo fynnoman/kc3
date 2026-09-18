@@ -6,9 +6,11 @@ export default function Footer() {
   return (
     <footer
       className="relative bg-[var(--kc3-black)] text-[var(--kc3-ivory)] border-t border-white/10"
-      style={{ padding: "56px var(--page-padding) 40px" }}
+      style={{
+        padding: "clamp(40px, 6vw, 56px) var(--page-padding) clamp(32px, 4vw, 40px)",
+      }}
     >
-      <div className="grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-12 items-start">
+      <div className="grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-10 items-start">
         <div className="col-span-12 md:col-span-3">
           <div
             className="font-medium tracking-[-0.05em] leading-none"
@@ -57,7 +59,9 @@ export default function Footer() {
         </div>
 
         <div className="col-span-12 md:col-span-3">
-          <div className="marker text-[var(--kc3-ivory)]/50 mb-3">Navigation</div>
+          <div className="marker text-[var(--kc3-ivory)]/50 mb-3">
+            Navigation
+          </div>
           <ul className="flex flex-col gap-2">
             {[
               { label: "Leistungen", href: "#leistungen" },
@@ -79,7 +83,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-16 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div className="mt-12 md:mt-16 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-4">
         <div className="marker text-[var(--kc3-ivory)]/60">
           © {year} {company.name}
         </div>

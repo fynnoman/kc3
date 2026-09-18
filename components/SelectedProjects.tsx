@@ -58,14 +58,14 @@ export default function SelectedProjects() {
       className="relative bg-[var(--kc3-ivory)] text-[var(--kc3-black)] border-t border-[color:var(--kc3-border)]"
       style={{ padding: "var(--section-space) var(--page-padding)" }}
     >
-      <div className="grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] items-end mb-16 md:mb-24">
+      <div className="grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] items-end mb-10 md:mb-24">
         <div className="col-span-12 md:col-span-8">
-          <div className="marker text-[var(--kc3-muted)] mb-8">
+          <div className="marker text-[var(--kc3-muted)] mb-4 md:mb-8">
             03 · Referenzen
           </div>
           <h2
-            className="sp-title font-medium tracking-[-0.055em] leading-[0.92]"
-            style={{ fontSize: "clamp(2.6rem, 7vw, 7.5rem)" }}
+            className="sp-title font-medium tracking-[-0.045em] md:tracking-[-0.055em] leading-[0.96] md:leading-[0.92]"
+            style={{ fontSize: "clamp(2.2rem, 7.5vw, 7.5rem)" }}
           >
             <span className="reveal-line block">
               <span>Ausgewählte</span>
@@ -101,7 +101,7 @@ export default function SelectedProjects() {
           <a
             key={p.index}
             href="#kontakt"
-            className="sp-row grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] items-baseline py-8 md:py-10 border-b border-[color:var(--kc3-border)] group cursor-pointer"
+            className="sp-row grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-3 items-baseline py-6 md:py-10 border-b border-[color:var(--kc3-border)] group cursor-pointer"
           >
             <div className="col-span-2 md:col-span-1">
               <span className="marker text-[var(--kc3-muted)]">{p.index}</span>
@@ -109,14 +109,14 @@ export default function SelectedProjects() {
 
             <div className="col-span-10 md:col-span-4">
               <h3
-                className="font-medium tracking-[-0.03em] leading-[1] transition-transform duration-700 group-hover:-translate-x-1"
-                style={{ fontSize: "clamp(1.6rem, 3.2vw, 3rem)" }}
+                className="font-medium tracking-[-0.03em] leading-[1.05] md:leading-[1] transition-transform duration-700 group-hover:-translate-x-1"
+                style={{ fontSize: "clamp(1.35rem, 3.6vw, 3rem)" }}
               >
                 {p.name}
               </h3>
             </div>
 
-            <div className="col-span-6 md:col-span-3 mt-4 md:mt-0">
+            <div className="col-span-6 md:col-span-3 mt-2 md:mt-0">
               <div className="marker text-[var(--kc3-muted)] mb-1">
                 Standort
               </div>
@@ -128,7 +128,7 @@ export default function SelectedProjects() {
               </div>
             </div>
 
-            <div className="col-span-6 md:col-span-2 mt-4 md:mt-0">
+            <div className="col-span-6 md:col-span-2 mt-2 md:mt-0">
               <div className="marker text-[var(--kc3-muted)] mb-1">
                 Kategorie
               </div>
@@ -140,7 +140,7 @@ export default function SelectedProjects() {
               </div>
             </div>
 
-            <div className="col-span-6 md:col-span-1 mt-4 md:mt-0">
+            <div className="col-span-6 md:col-span-1 mt-2 md:mt-0">
               <div className="marker text-[var(--kc3-muted)] mb-1">Status</div>
               <div
                 className="tracking-[-0.01em]"
@@ -150,7 +150,7 @@ export default function SelectedProjects() {
               </div>
             </div>
 
-            <div className="col-span-6 md:col-span-1 mt-4 md:mt-0 text-right">
+            <div className="col-span-6 md:col-span-1 mt-2 md:mt-0 text-right">
               <div className="marker text-[var(--kc3-muted)] mb-1">Jahr</div>
               <div
                 className="tracking-[-0.01em] flex items-baseline justify-end gap-2"

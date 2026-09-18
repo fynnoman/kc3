@@ -10,8 +10,8 @@
   --kc3-border: rgba(17, 19, 18, 0.14);
   --kc3-accent: #746B5C;
 
-  --page-padding: clamp(24px, 4vw, 72px);
-  --section-space: clamp(120px, 14vw, 240px);
+  --page-padding: clamp(20px, 4vw, 72px);
+  --section-space: clamp(72px, 12vw, 240px);
 }
 
 @theme inline {
@@ -40,6 +40,14 @@ body {
 
 body {
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 640px) {
+  .marker {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+  }
 }
 
 ::selection {

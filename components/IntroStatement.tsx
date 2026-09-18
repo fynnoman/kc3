@@ -56,7 +56,7 @@ export default function IntroStatement() {
       style={{ padding: "var(--section-space) var(--page-padding)" }}
     >
       <div className="grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)]">
-        <div className="col-span-12 md:col-span-2 mb-16 md:mb-0 flex flex-col justify-between gap-16 sticky md:top-32 self-start">
+        <div className="col-span-12 md:col-span-2 mb-8 md:mb-0 flex flex-col justify-between gap-16 md:sticky md:top-32 self-start">
           <div className="marker text-[var(--kc3-muted)]">01 · Selbstverständnis</div>
           <div className="hidden md:block">
             <div className="marker text-[var(--kc3-muted)] mb-3">Kapitel</div>
@@ -74,8 +74,8 @@ export default function IntroStatement() {
 
         <div className="col-span-12 md:col-span-10">
           <h2
-            className="font-medium tracking-[-0.055em] leading-[0.94]"
-            style={{ fontSize: "clamp(2.6rem, 6.4vw, 7rem)" }}
+            className="font-medium tracking-[-0.045em] md:tracking-[-0.055em] leading-[1] md:leading-[0.94]"
+            style={{ fontSize: "clamp(2.1rem, 6.8vw, 7rem)" }}
           >
             <span className="block">{renderWords(line1)}</span>
             <span className="block">{renderWords(line2)}</span>
@@ -87,7 +87,7 @@ export default function IntroStatement() {
             <span className="block">{renderWords(line4)}</span>
           </h2>
 
-          <div className="mt-24 md:mt-40 grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-16">
+          <div className="mt-14 md:mt-40 grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-12 md:gap-y-16">
             <div className="col-span-12 md:col-span-5">
               <div className="hairline text-[var(--kc3-black)] mb-8" />
               <p

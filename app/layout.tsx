@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Manrope, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
@@ -17,6 +17,13 @@ const instrumentSerif = Instrument_Serif({
   style: ["normal", "italic"],
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#111312",
+};
 
 export const metadata: Metadata = {
   title: "KC3 GmbH — Immobilien. Entwicklung. Perspektiven.",

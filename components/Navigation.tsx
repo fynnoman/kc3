@@ -40,7 +40,7 @@ export default function Navigation() {
       >
         <div
           className="flex items-center justify-between"
-          style={{ padding: "22px var(--page-padding)" }}
+          style={{ padding: "clamp(16px, 2.4vw, 22px) var(--page-padding)" }}
         >
           <a
             href="#top"
@@ -69,8 +69,12 @@ export default function Navigation() {
 
           <button
             onClick={() => setOpen((v) => !v)}
-            className={`marker flex items-center gap-3 md:hidden transition-colors ${
-              scrolled || open ? "text-[var(--kc3-black)]" : "text-[var(--kc3-ivory)]"
+            className={`marker flex items-center gap-3 md:hidden transition-colors py-2 -my-2 relative z-[60] ${
+              open
+                ? "text-[var(--kc3-ivory)]"
+                : scrolled
+                  ? "text-[var(--kc3-black)]"
+                  : "text-[var(--kc3-ivory)]"
             }`}
             aria-label={open ? "Menü schließen" : "Menü öffnen"}
           >
@@ -86,8 +90,8 @@ export default function Navigation() {
         }`}
       >
         <div
-          className="relative h-full flex flex-col justify-between"
-          style={{ padding: "120px var(--page-padding) 48px" }}
+          className="relative h-full flex flex-col justify-between overflow-y-auto"
+          style={{ padding: "clamp(96px, 15vw, 120px) var(--page-padding) 40px" }}
         >
           <div className="grid-lines" aria-hidden>
             {Array.from({ length: 12 }).map((_, i) => (
@@ -101,14 +105,14 @@ export default function Navigation() {
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-baseline gap-6 py-6 group"
+                  className="flex items-baseline gap-4 md:gap-6 py-5 md:py-6 group"
                 >
-                  <span className="marker text-[var(--kc3-muted)] w-8">
+                  <span className="marker text-[var(--kc3-muted)] w-6 md:w-8 shrink-0">
                     0{i + 1}
                   </span>
                   <span
-                    className="font-medium tracking-[-0.04em] leading-none transition-transform duration-700 group-hover:-translate-x-1"
-                    style={{ fontSize: "clamp(2.4rem, 8vw, 6.4rem)" }}
+                    className="font-medium tracking-[-0.04em] leading-[1.05] md:leading-none transition-transform duration-700 group-hover:-translate-x-1"
+                    style={{ fontSize: "clamp(2rem, 9vw, 6.4rem)" }}
                   >
                     {l.label}
                   </span>

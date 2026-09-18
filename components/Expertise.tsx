@@ -168,10 +168,10 @@ export default function Expertise() {
           </div>
 
           <div
-            className="relative grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-16 items-stretch min-h-[100svh]"
-            style={{ padding: "clamp(60px, 8vw, 120px) var(--page-padding)" }}
+            className="relative grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-10 md:gap-y-16 items-stretch md:min-h-[100svh]"
+            style={{ padding: "clamp(56px, 8vw, 120px) var(--page-padding)" }}
           >
-            <div className="col-span-12 md:col-span-6 flex flex-col justify-between gap-14">
+            <div className="col-span-12 md:col-span-6 order-2 md:order-1 flex flex-col justify-between gap-10 md:gap-14">
               <div className="flex items-start justify-between exp-meta">
                 <div className="marker text-[var(--kc3-ivory)]/50">
                   {item.index} / {String(expertise.length).padStart(2, "0")}
@@ -182,8 +182,8 @@ export default function Expertise() {
               </div>
 
               <h2
-                className="font-medium tracking-[-0.06em] leading-[0.88]"
-                style={{ fontSize: "clamp(3rem, 8vw, 8.4rem)" }}
+                className="font-medium tracking-[-0.05em] md:tracking-[-0.06em] leading-[0.92] md:leading-[0.88]"
+                style={{ fontSize: "clamp(2.6rem, 9vw, 8.4rem)" }}
               >
                 <span className="reveal-line exp-line">
                   <span>{item.title}</span>
@@ -234,8 +234,8 @@ export default function Expertise() {
               </div>
             </div>
 
-            <div className="col-span-12 md:col-span-6 md:pl-8 flex flex-col gap-8">
-              <div className="relative w-full flex-1 min-h-[52vh] md:min-h-[62vh]">
+            <div className="col-span-12 md:col-span-6 order-1 md:order-2 md:pl-8 flex flex-col gap-6 md:gap-8">
+              <div className="relative w-full flex-1 min-h-[44vh] md:min-h-[62vh]">
                 <div
                   className="exp-image absolute inset-0 will-change-transform"
                   style={{

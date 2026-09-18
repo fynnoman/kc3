@@ -79,8 +79,8 @@ export default function AboutKC3() {
       </div>
 
       <h2
-        className="about-title font-medium tracking-[-0.06em] leading-[0.86]"
-        style={{ fontSize: "clamp(4rem, 12vw, 12rem)", marginTop: "-0.35em" }}
+        className="about-title font-medium tracking-[-0.05em] md:tracking-[-0.06em] leading-[0.88] md:leading-[0.86]"
+        style={{ fontSize: "clamp(3.4rem, 13vw, 12rem)", marginTop: "-0.35em" }}
       >
         <span className="reveal-line block">
           <span>Über</span>
@@ -90,9 +90,9 @@ export default function AboutKC3() {
         </span>
       </h2>
 
-      <div className="hairline text-[var(--kc3-black)] mt-16 md:mt-24" />
+      <div className="hairline text-[var(--kc3-black)] mt-10 md:mt-24" />
 
-      <div className="mt-12 md:mt-16 grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-14 items-start">
+      <div className="mt-8 md:mt-16 grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-10 md:gap-y-14 items-start">
         <div className="about-copy col-span-12 md:col-span-6 flex flex-col gap-10 max-w-xl">
           <div className="marker text-[var(--kc3-muted)]">Selbstverständnis</div>
           <p
@@ -134,9 +134,9 @@ export default function AboutKC3() {
         </div>
       </div>
 
-      <div className="hairline text-[var(--kc3-black)] mt-16 md:mt-20" />
+      <div className="hairline text-[var(--kc3-black)] mt-10 md:mt-20" />
 
-      <dl className="mt-10 md:mt-14 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      <dl className="mt-8 md:mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
         <div className="about-copy flex flex-col gap-2">
           <dt className="marker text-[var(--kc3-muted)]">Geschäftssitz</dt>
           <dd>
@@ -188,7 +188,7 @@ export default function AboutKC3() {
         </div>
       </dl>
 
-      <div className="mt-20 md:mt-32 relative w-full h-[52vh] md:h-[72vh] overflow-hidden">
+      <div className="mt-14 md:mt-32 relative w-full h-[42vh] md:h-[72vh] overflow-hidden">
         <div
           className="about-image absolute inset-0 will-change-transform"
           style={{
@@ -196,7 +196,7 @@ export default function AboutKC3() {
               "url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=85&w=2400&auto=format&fit=crop')",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            filter: "grayscale(0.2) contrast(1.05)",
+            filter: "grayscale(0.2) contrast(1.02) brightness(0.92)",
           }}
         />
         <div
@@ -204,7 +204,7 @@ export default function AboutKC3() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(17,19,18,0) 60%, rgba(17,19,18,0.35) 100%)",
+              "linear-gradient(180deg, rgba(17,19,18,0.05) 0%, rgba(17,19,18,0.35) 100%)",
           }}
         />
         <div className="absolute bottom-6 left-6 marker text-[var(--kc3-ivory)]/85">

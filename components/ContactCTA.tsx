@@ -79,10 +79,10 @@ export default function ContactCTA() {
         <div className="hairline text-[var(--kc3-ivory)] mt-6 cta-fade" />
 
         <h2
-          className="font-medium tracking-[-0.06em] leading-[0.88]"
+          className="font-medium tracking-[-0.05em] md:tracking-[-0.06em] leading-[1] md:leading-[0.88]"
           style={{
-            fontSize: "clamp(3rem, 9vw, 9rem)",
-            marginTop: "clamp(24px, 3vw, 48px)",
+            fontSize: "clamp(2.4rem, 8.5vw, 9rem)",
+            marginTop: "clamp(18px, 3vw, 48px)",
           }}
         >
           <span className="reveal-line cta-line block">
@@ -110,8 +110,8 @@ export default function ContactCTA() {
             <div className="flex flex-col gap-4">
               <a
                 href={`mailto:${company.contact.email}`}
-                className="link-arrow inline-flex items-baseline gap-3 self-start font-medium tracking-[-0.03em] leading-[1] border-b border-[var(--kc3-ivory)]/40 hover:border-[var(--kc3-ivory)] pb-3"
-                style={{ fontSize: "clamp(1.6rem, 3vw, 3rem)" }}
+                className="link-arrow inline-flex items-baseline gap-3 self-start font-medium tracking-[-0.03em] leading-[1.05] md:leading-[1] border-b border-[var(--kc3-ivory)]/40 hover:border-[var(--kc3-ivory)] pb-3"
+                style={{ fontSize: "clamp(1.35rem, 3.2vw, 3rem)" }}
               >
                 Kontakt per E-Mail
                 <span aria-hidden className="text-[0.6em]">

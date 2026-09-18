@@ -242,7 +242,7 @@ export default function Expertise() {
                     backgroundImage: `url('${item.image}')`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    filter: "grayscale(0.15) contrast(1.05) brightness(0.85)",
+                    filter: "grayscale(0.15) contrast(1) brightness(1.08)",
                   }}
                 />
                 <div
@@ -250,7 +250,7 @@ export default function Expertise() {
                   className="absolute inset-0"
                   style={{
                     background:
-                      "linear-gradient(180deg, rgba(17,19,18,0.15) 0%, rgba(17,19,18,0.55) 100%)",
+                      "linear-gradient(180deg, rgba(17,19,18,0) 0%, rgba(17,19,18,0.2) 100%)",
                   }}
                 />
                 <div className="absolute bottom-6 left-6 marker text-[var(--kc3-ivory)]/80 exp-meta">

@@ -71,7 +71,7 @@ export default function Hero() {
             "url('https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=85&w=2400&auto=format&fit=crop')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          filter: "grayscale(0.35) contrast(1.05) brightness(0.62)",
+          filter: "grayscale(0.2) contrast(1.02) brightness(0.92)",
         }}
       />
 
@@ -80,7 +80,7 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(17,19,18,0.55) 0%, rgba(17,19,18,0.25) 40%, rgba(17,19,18,0.85) 100%)",
+            "linear-gradient(180deg, rgba(17,19,18,0.25) 0%, rgba(17,19,18,0.05) 40%, rgba(17,19,18,0.55) 100%)",
         }}
       />
 

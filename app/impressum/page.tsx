@@ -42,11 +42,7 @@ export default function ImpressumPage() {
 
           <section>
             <div className="marker text-[var(--kc3-muted)] mb-2">Kontakt</div>
-            <p>
-              Tel.: {company.contact.phone}
-              <br />
-              E-Mail: {company.contact.email}
-            </p>
+            <p>E-Mail: {company.contact.email}</p>
           </section>
 
           <section>

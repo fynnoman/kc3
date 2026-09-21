@@ -127,15 +127,15 @@ export default function Expertise() {
         <div className="grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-12 items-end">
           <div className="col-span-12 md:col-span-8">
             <div className="marker text-[var(--kc3-ivory)]/60 mb-4">
-              02 · Leistungen
+              02 · Tätigkeitsfelder
             </div>
             <h3
-              className="font-medium tracking-[-0.05em] leading-[0.94] max-w-[16ch]"
+              className="font-medium tracking-[-0.05em] leading-[0.94] max-w-[18ch]"
               style={{ fontSize: "clamp(2rem, 4.5vw, 4.4rem)" }}
             >
-              Zwei Geschäftsbereiche.{" "}
-              <span className="font-editorial font-normal text-[var(--kc3-ivory)]/75">
-                Ein Anspruch.
+              Investieren.{" "}
+              <span className="font-light text-[var(--kc3-ivory)]/70">
+                Halten. Vermieten.
               </span>
             </h3>
           </div>
@@ -145,12 +145,13 @@ export default function Expertise() {
               className="tracking-[-0.01em] leading-[1.55] text-[var(--kc3-ivory)]/80 max-w-sm"
               style={{ fontSize: "clamp(0.98rem, 1.1vw, 1.05rem)" }}
             >
-              Die KC3 GmbH bündelt Ankauf, Entwicklung und Verwaltung von
-              Immobilien unter einem Dach. Alle Entscheidungen erfolgen aus
-              Eigentümerperspektive.
+              KC3 investiert eigenes Kapital in Wohn- und Gewerbeimmobilien,
+              hält diese im eigenen Bestand und vermietet sie langfristig.
+              Sämtliche Aktivitäten erfolgen auf eigene Rechnung, nicht als
+              Dienstleistung für Dritte.
             </p>
             <div className="marker text-[var(--kc3-ivory)]/50">
-              Ankauf · Entwicklung · Bestand
+              Eigenkapital · Bestand · Vermietung
             </div>
           </div>
         </div>
@@ -177,7 +178,11 @@ export default function Expertise() {
                   {item.index} / {String(expertise.length).padStart(2, "0")}
                 </div>
                 <div className="marker text-[var(--kc3-ivory)]/40">
-                  {item.slug === "immobilien" ? "Bestand" : "Entwicklung"}
+                  {item.slug === "investitionen"
+                    ? "Investition"
+                    : item.slug === "vermietung"
+                      ? "Vermietung"
+                      : "Entwicklung"}
                 </div>
               </div>
 
@@ -223,14 +228,6 @@ export default function Expertise() {
                   </ul>
                 </div>
 
-                <a
-                  href={item.cta.href}
-                  className="link-arrow inline-flex items-center gap-3 font-medium tracking-[-0.02em] leading-none border-b border-[var(--kc3-ivory)]/40 hover:border-[var(--kc3-ivory)] pb-3 self-start exp-meta"
-                  style={{ fontSize: "clamp(1.05rem, 1.35vw, 1.35rem)" }}
-                >
-                  {item.cta.label}
-                  <span aria-hidden>↗</span>
-                </a>
               </div>
             </div>
 

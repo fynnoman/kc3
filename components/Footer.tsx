@@ -11,19 +11,31 @@ export default function Footer() {
       }}
     >
       <div className="grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-10 items-start">
-        <div className="col-span-12 md:col-span-3">
-          <div
-            className="font-medium tracking-[-0.05em] leading-none"
-            style={{ fontSize: "clamp(1.6rem, 2vw, 1.9rem)" }}
-          >
-            {company.short}
+        <div className="col-span-12 md:col-span-4">
+          <div className="inline-flex items-baseline gap-2 leading-none">
+            <span
+              className="font-medium tracking-[-0.05em]"
+              style={{ fontSize: "clamp(1.6rem, 2vw, 1.9rem)" }}
+            >
+              {company.short}
+            </span>
+            <span
+              className="marker"
+              style={{
+                color: "var(--kc3-navy)",
+                fontSize: "0.6rem",
+                letterSpacing: "0.22em",
+              }}
+            >
+              GmbH
+            </span>
           </div>
           <div className="marker text-[var(--kc3-ivory)]/50 mt-3">
             {company.tagline}
           </div>
         </div>
 
-        <div className="col-span-6 md:col-span-3">
+        <div className="col-span-6 md:col-span-4">
           <div className="marker text-[var(--kc3-ivory)]/50 mb-3">Sitz</div>
           <div
             className="tracking-[-0.02em] leading-[1.5]"
@@ -37,18 +49,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="col-span-6 md:col-span-3">
-          <div className="marker text-[var(--kc3-ivory)]/50 mb-3">Direkt</div>
+        <div className="col-span-6 md:col-span-4">
+          <div className="marker text-[var(--kc3-ivory)]/50 mb-3">Kontakt</div>
           <div
             className="tracking-[-0.02em] leading-[1.5]"
             style={{ fontSize: "clamp(0.95rem, 1vw, 1rem)" }}
           >
-            <a
-              href={`tel:${company.contact.phone.replace(/\s/g, "")}`}
-              className="hover:text-[var(--kc3-ivory)] block"
-            >
-              {company.contact.phone}
-            </a>
             <a
               href={`mailto:${company.contact.email}`}
               className="hover:text-[var(--kc3-ivory)] block"
@@ -56,30 +62,6 @@ export default function Footer() {
               {company.contact.email}
             </a>
           </div>
-        </div>
-
-        <div className="col-span-12 md:col-span-3">
-          <div className="marker text-[var(--kc3-ivory)]/50 mb-3">
-            Navigation
-          </div>
-          <ul className="flex flex-col gap-2">
-            {[
-              { label: "Leistungen", href: "#leistungen" },
-              { label: "Projekte", href: "#projekte" },
-              { label: "Unternehmen", href: "#unternehmen" },
-              { label: "Kontakt", href: "#kontakt" },
-            ].map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  className="tracking-[-0.02em] text-[var(--kc3-ivory)]/80 hover:text-[var(--kc3-ivory)] transition-colors"
-                  style={{ fontSize: "clamp(0.95rem, 1vw, 1rem)" }}
-                >
-                  {l.label}
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
 
@@ -102,7 +84,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="marker text-[var(--kc3-ivory)]/40">
-          {company.address.region}
+          Deutschlandweit
         </div>
       </div>
     </footer>

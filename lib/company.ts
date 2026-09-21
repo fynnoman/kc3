@@ -2,25 +2,19 @@ export const company = {
   name: "KC3 GmbH",
   short: "KC3",
   founded: 2024,
-  tagline: "Immobilien. Entwicklung. Perspektiven.",
+  tagline: "Immobilieninvestitionen. Bestand. Perspektive.",
 
   address: {
-    street: "Trierer Straße 12",
+    street: "Spitzstraße 20",
     zip: "54344",
     city: "Kenn",
     country: "Deutschland",
-    region: "Rheinland-Pfalz",
-    mapsQuery: "KC3+GmbH+Trierer+Straße+12+54344+Kenn",
+    region: "Deutschland",
+    mapsQuery: "KC3+GmbH+Spitzstraße+20+54344+Kenn",
   },
 
   contact: {
-    phone: "+49 6502 93 84 20",
     email: "kontakt@kc3-gmbh.de",
-    responseTime: "Rückmeldung innerhalb von zwei Werktagen",
-    hours: [
-      { days: "Montag – Freitag", time: "09:00 – 18:00 Uhr" },
-      { days: "Samstag – Sonntag", time: "Nach Vereinbarung" },
-    ],
   },
 
   management: {
@@ -34,63 +28,9 @@ export const company = {
     vatId: "DE000000000",
   },
 
-  regions: ["Kenn", "Trier", "Konz", "Rheinland-Pfalz"],
+  scope: "Deutschlandweit",
   sectors: ["Wohnen", "Gewerbe", "Mischnutzung"],
-
-  principles: [
-    {
-      n: "I",
-      title: "Substanz",
-      body: "Erwerb von Objekten mit belastbarer Standort- und Bauqualität. Kein spekulativer Zwischenhandel.",
-    },
-    {
-      n: "II",
-      title: "Steuerung",
-      body: "Entwicklung, Vermietung und Verwaltung aus einer Hand — vom Ankauf bis in die Nutzungsphase.",
-    },
-    {
-      n: "III",
-      title: "Perspektive",
-      body: "Investitionshorizonte von zehn Jahren und länger. Wertentwicklung entsteht über Zyklen hinweg.",
-    },
-  ],
 } as const;
-
-export type Project = {
-  index: string;
-  name: string;
-  location: string;
-  year: string;
-  type: string;
-  status: string;
-};
-
-export const projects: Project[] = [
-  {
-    index: "01",
-    name: "Wohnimmobilie Kenn",
-    location: "Kenn · Rheinland-Pfalz",
-    year: "2025",
-    type: "Mehrfamilienobjekt",
-    status: "In Entwicklung",
-  },
-  {
-    index: "02",
-    name: "Gewerbeobjekt Moselufer",
-    location: "Trier · Rheinland-Pfalz",
-    year: "2024",
-    type: "Revitalisierung Gewerbe",
-    status: "Im Bestand",
-  },
-  {
-    index: "03",
-    name: "Grundstück Konz-Nord",
-    location: "Konz · Rheinland-Pfalz",
-    year: "2026",
-    type: "Grundstücksentwicklung",
-    status: "In Vorbereitung",
-  },
-];
 
 export type Expertise = {
   index: string;
@@ -99,59 +39,67 @@ export type Expertise = {
   intro: string;
   services: string[];
   detail: { label: string; value: string }[];
-  cta: { label: string; href: string };
   image: string;
 };
 
 export const expertise: Expertise[] = [
   {
     index: "01",
-    slug: "immobilien",
-    title: "Immobilien",
+    slug: "investitionen",
+    title: "Immobilieninvestitionen",
     intro:
-      "Ankauf, Bestandshaltung und Verwaltung von Wohn- und Gewerbeimmobilien. Unser Kapital bleibt in den Objekten, die wir erwerben — mit dem Anspruch, Substanz zu erkennen und über Jahrzehnte aufzubauen.",
+      "Die KC3 GmbH investiert eigenes Kapital in Wohn- und Gewerbeimmobilien. Alle Objekte werden auf eigene Rechnung erworben und dauerhaft im eigenen Bestand gehalten.",
     services: [
-      "Ankauf einzelner Bestandsobjekte",
-      "Aufbau und Erweiterung von Immobilienportfolios",
-      "Kaufmännische und technische Verwaltung",
-      "Vermietung, Instandhaltung und Werterhalt",
+      "Ankauf von Bestandsobjekten auf eigene Rechnung",
+      "Aufbau und Erweiterung eines eigenen Immobilienportfolios",
+      "Langfristige Bestandshaltung und Werterhalt",
+      "Kaufmännische und technische Steuerung des Portfolios",
     ],
     detail: [
-      { label: "Objekttypen", value: "Wohn- und Gewerbeimmobilien" },
-      { label: "Region", value: "Rheinland-Pfalz und angrenzend" },
-      { label: "Haltedauer", value: "10 Jahre und länger" },
+      { label: "Anlageklasse", value: "Wohn- und Gewerbeimmobilien" },
+      { label: "Kapital", value: "Ausschließlich Eigenkapital" },
+      { label: "Rolle", value: "Eigentümer und Bestandshalter" },
     ],
-    cta: {
-      label: "Objekt anbieten",
-      href: "mailto:kontakt@kc3-gmbh.de?subject=Objektangebot",
-    },
     image:
       "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=85&w=2000&auto=format&fit=crop",
   },
   {
     index: "02",
+    slug: "vermietung",
+    title: "Vermietung",
+    intro:
+      "Vermietung eigener Wohn- und Gewerbeobjekte an private und gewerbliche Nutzer. Die Bewirtschaftung erfolgt langfristig, stabil und aus Eigentümerhand.",
+    services: [
+      "Vermietung eigener Wohnobjekte",
+      "Vermietung eigener Gewerbeflächen",
+      "Objekt- und Mietverwaltung im eigenen Bestand",
+      "Instandhaltung und laufender Werterhalt",
+    ],
+    detail: [
+      { label: "Nutzung", value: "Wohnen und Gewerbe" },
+      { label: "Bestand", value: "Ausschließlich eigene Objekte" },
+      { label: "Horizont", value: "Langfristige Vermietung" },
+    ],
+    image:
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=85&w=2000&auto=format&fit=crop",
+  },
+  {
+    index: "03",
     slug: "projektentwicklung",
     title: "Projektentwicklung",
     intro:
-      "Entwicklung und Revitalisierung von Immobilien und Grundstücken. Wir begleiten Vorhaben von der ersten Standortanalyse über Konzeption und Realisierung bis in die langfristige Nutzung.",
+      "Ergänzend zur Bestandshaltung entwickelt die KC3 GmbH ausgewählte eigene Objekte und Grundstücke weiter. Auch hier immer auf eigene Rechnung und mit dem Ziel, die Objekte in den eigenen Bestand zu überführen.",
     services: [
-      "Grundstücksentwicklung und Nutzungskonzepte",
-      "Revitalisierung von Bestandsobjekten",
-      "Baubetreuung und Projektsteuerung",
-      "Übergabe in die eigene Bestandshaltung",
+      "Entwicklung eigener Grundstücke",
+      "Revitalisierung eigener Bestandsobjekte",
+      "Steuerung eigener Bauvorhaben",
+      "Überführung in die eigene Bestandshaltung",
     ],
     detail: [
-      { label: "Vorhaben", value: "Wohnen · Gewerbe · Mischnutzung" },
-      { label: "Region", value: "Rheinland-Pfalz und angrenzend" },
-      {
-        label: "Phasen",
-        value: "Analyse · Konzeption · Realisierung · Übergabe",
-      },
+      { label: "Rolle", value: "Bauherr auf eigene Rechnung" },
+      { label: "Ziel", value: "Übergang in den eigenen Bestand" },
+      { label: "Umfang", value: "Ausgewählte Vorhaben, nachrangig" },
     ],
-    cta: {
-      label: "Projekt vorstellen",
-      href: "mailto:kontakt@kc3-gmbh.de?subject=Projektvorstellung",
-    },
     image:
       "https://images.unsplash.com/photo-1590725175785-de1b1f5b7b2b?q=85&w=2000&auto=format&fit=crop",
   },

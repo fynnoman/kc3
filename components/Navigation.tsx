@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 
 const links = [
   { label: "Leistungen", href: "#leistungen" },
-  { label: "Projekte", href: "#projekte" },
   { label: "Unternehmen", href: "#unternehmen" },
   { label: "Kontakt", href: "#kontakt" },
 ];
@@ -44,11 +43,26 @@ export default function Navigation() {
         >
           <a
             href="#top"
-            className={`marker leading-none transition-colors ${
+            className={`inline-flex items-baseline gap-2 leading-none transition-colors ${
               scrolled || open ? "text-[var(--kc3-black)]" : "text-[var(--kc3-ivory)]"
             }`}
           >
-            KC3
+            <span
+              className="marker"
+              style={{ fontSize: "clamp(0.8rem, 1vw, 0.9rem)" }}
+            >
+              KC3
+            </span>
+            <span
+              className="marker"
+              style={{
+                color: "var(--kc3-navy)",
+                fontSize: "0.55rem",
+                letterSpacing: "0.22em",
+              }}
+            >
+              GmbH
+            </span>
           </a>
 
           <nav className="hidden md:flex items-center gap-10">
@@ -126,7 +140,7 @@ export default function Navigation() {
               KC3 GmbH · Kenn, Deutschland
             </div>
             <div className="marker text-[var(--kc3-muted)]">
-              Immobilien · Entwicklung
+              Deutschlandweit · Immobilieninvestitionen
             </div>
           </div>
         </div>

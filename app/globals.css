@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --kc3-black: #111312;
-  --kc3-graphite: #1A1D1B;
-  --kc3-stone: #D8D6CF;
-  --kc3-ivory: #F2F0EA;
-  --kc3-white: #FAFAF7;
-  --kc3-muted: #858984;
-  --kc3-border: rgba(17, 19, 18, 0.14);
-  --kc3-accent: #746B5C;
+  --kc3-black: #0F1113;
+  --kc3-graphite: #1B1D20;
+  --kc3-stone: #C9C9C6;
+  --kc3-ivory: #ECECEA;
+  --kc3-white: #F7F7F5;
+  --kc3-muted: #7A7C7F;
+  --kc3-border: rgba(15, 17, 19, 0.14);
+  --kc3-navy: #14315C;
+  --kc3-accent: #14315C;
 
   --page-padding: clamp(20px, 4vw, 72px);
   --section-space: clamp(72px, 12vw, 240px);
@@ -18,7 +19,6 @@
   --color-background: var(--kc3-ivory);
   --color-foreground: var(--kc3-black);
   --font-sans: var(--font-manrope);
-  --font-serif: var(--font-instrument-serif);
 }
 
 * {
@@ -51,13 +51,8 @@ body {
 }
 
 ::selection {
-  background: var(--kc3-black);
+  background: var(--kc3-navy);
   color: var(--kc3-ivory);
-}
-
-.font-editorial {
-  font-family: var(--font-instrument-serif), ui-serif, Georgia, serif;
-  font-style: italic;
 }
 
 .reveal-line {

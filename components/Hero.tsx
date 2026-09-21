@@ -1,10 +1,28 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+
+const HERO_IMAGES = [
+  "/hero/hero-1.png",
+  "/hero/hero-2.png",
+  "/hero/hero-3.png",
+];
 
 export default function Hero() {
   const root = useRef<HTMLDivElement>(null);
+  const [activeImage, setActiveImage] = useState(0);
+
+  useEffect(() => {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+
+    const id = window.setInterval(() => {
+      setActiveImage((i) => (i + 1) % HERO_IMAGES.length);
+    }, 6000);
+
+    return () => window.clearInterval(id);
+  }, []);
 
   useEffect(() => {
     if (!root.current) return;
@@ -66,14 +84,22 @@ export default function Hero() {
       <div
         aria-hidden
         className="hero-media absolute inset-0 will-change-transform"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=85&w=2400&auto=format&fit=crop')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "grayscale(0.2) contrast(1.02) brightness(0.92)",
-        }}
-      />
+      >
+        {HERO_IMAGES.map((src, i) => (
+          <div
+            key={src}
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url('${src}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              filter: "grayscale(0.15) contrast(1.02) brightness(0.9)",
+              opacity: i === activeImage ? 1 : 0,
+              transition: "opacity 1600ms cubic-bezier(0.4, 0, 0.2, 1)",
+            }}
+          />
+        ))}
+      </div>
 
       <div
         aria-hidden
@@ -101,10 +127,10 @@ export default function Hero() {
       >
         <div className="flex items-start justify-between gap-4 hero-marker">
           <span className="marker text-[var(--kc3-ivory)]/70">
-            Kenn · Rheinland-Pfalz
+            KC3 GmbH · Kenn, Deutschland
           </span>
           <span className="marker text-[var(--kc3-ivory)]/70 hidden md:inline">
-            Gegründet 2024 · GmbH
+            Deutschlandweit tätig
           </span>
         </div>
 
@@ -117,53 +143,39 @@ export default function Hero() {
               <span>Immobilien.</span>
             </span>
             <span className="reveal-line hero-line">
-              <span>Entwicklung.</span>
+              <span>Bestand.</span>
             </span>
             <span className="reveal-line hero-line">
-              <span className="font-editorial font-normal">Perspektiven.</span>
+              <span className="font-light">Perspektive.</span>
             </span>
           </h1>
         </div>
 
         <div className="flex flex-col gap-4 md:gap-6">
           <div className="hairline text-[var(--kc3-ivory)] hero-meta" />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
             <a
               href="#leistungen"
-              className="hero-meta group transition-colors hover:text-[var(--kc3-accent)]"
+              className="hero-meta group transition-colors hover:text-[var(--kc3-ivory)]"
             >
-              <div className="marker text-[var(--kc3-ivory)]/60 mb-2 group-hover:text-[var(--kc3-accent)] transition-colors">
-                Leistungen
+              <div className="marker text-[var(--kc3-ivory)]/60 mb-2">
+                Tätigkeit
               </div>
               <div
                 className="tracking-[-0.02em] leading-[1.35]"
                 style={{ fontSize: "clamp(0.95rem, 1.15vw, 1.1rem)" }}
               >
-                Immobilien
+                Immobilieninvestitionen
                 <br />
-                Projektentwicklung
+                Vermietung eigener Objekte
               </div>
             </a>
 
-            <div className="hero-meta">
-              <div className="marker text-[var(--kc3-ivory)]/60 mb-2">
-                Regionen
-              </div>
-              <div
-                className="tracking-[-0.02em] leading-[1.35]"
-                style={{ fontSize: "clamp(0.95rem, 1.15vw, 1.1rem)" }}
-              >
-                Rheinland-Pfalz
-                <br />
-                Kenn · Trier · Konz
-              </div>
-            </div>
-
             <a
               href="#unternehmen"
-              className="hero-meta group transition-colors hover:text-[var(--kc3-accent)]"
+              className="hero-meta group transition-colors hover:text-[var(--kc3-ivory)]"
             >
-              <div className="marker text-[var(--kc3-ivory)]/60 mb-2 group-hover:text-[var(--kc3-accent)] transition-colors">
+              <div className="marker text-[var(--kc3-ivory)]/60 mb-2">
                 Unternehmen
               </div>
               <div
@@ -172,15 +184,15 @@ export default function Hero() {
               >
                 KC3 GmbH
                 <br />
-                Kenn, Deutschland
+                Eigentümergeführt
               </div>
             </a>
 
             <a
               href="#kontakt"
-              className="hero-meta group transition-colors hover:text-[var(--kc3-accent)]"
+              className="hero-meta group transition-colors hover:text-[var(--kc3-ivory)]"
             >
-              <div className="marker text-[var(--kc3-ivory)]/60 mb-2 group-hover:text-[var(--kc3-accent)] transition-colors">
+              <div className="marker text-[var(--kc3-ivory)]/60 mb-2">
                 Kontakt
               </div>
               <div

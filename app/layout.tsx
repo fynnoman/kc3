@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope, Instrument_Serif } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 
@@ -10,29 +10,21 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#111312",
+  themeColor: "#0F1113",
 };
 
 export const metadata: Metadata = {
-  title: "KC3 GmbH — Immobilien. Entwicklung. Perspektiven.",
+  title: "KC3 GmbH — Immobilieninvestitionen. Bestand. Perspektive.",
   description:
-    "Die KC3 GmbH mit Sitz in Kenn steht für nachhaltige Immobilieninvestitionen, professionelle Projektentwicklung und die Wertsteigerung bestehender Immobilien.",
+    "Die KC3 GmbH ist eine deutschlandweit tätige, eigentümergeführte Investment- und Bestandsgesellschaft für Wohn- und Gewerbeimmobilien.",
   openGraph: {
-    title: "KC3 GmbH — Immobilien. Entwicklung. Perspektiven.",
+    title: "KC3 GmbH — Immobilieninvestitionen. Bestand. Perspektive.",
     description:
-      "Nachhaltige Immobilieninvestitionen, professionelle Projektentwicklung und Wertsteigerung bestehender Immobilien.",
+      "Deutschlandweit tätige Investment- und Bestandsgesellschaft für Wohn- und Gewerbeimmobilien. Erwerb, Vermietung und Projektentwicklung auf eigene Rechnung.",
     locale: "de_DE",
     type: "website",
   },
@@ -42,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="de"
-      className={`${manrope.variable} ${instrumentSerif.variable} antialiased`}
+      className={`${manrope.variable} antialiased`}
     >
       <body>
         <Navigation />

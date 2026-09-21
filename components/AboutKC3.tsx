@@ -86,7 +86,7 @@ export default function AboutKC3() {
           <span>Über</span>
         </span>
         <span className="reveal-line block">
-          <span className="font-editorial font-normal">KC3.</span>
+          <span className="font-light">KC3.</span>
         </span>
       </h2>
 
@@ -99,17 +99,17 @@ export default function AboutKC3() {
             className="tracking-[-0.02em] leading-[1.5] text-[var(--kc3-black)]/85"
             style={{ fontSize: "clamp(1.15rem, 1.5vw, 1.5rem)" }}
           >
-            Die KC3 GmbH handelt als langfristiger Eigentümer. Jedes Objekt
-            bleibt nach der Entwicklung in eigener Verantwortung und in eigenem
-            Bestand.
+            Die KC3 GmbH ist eine eigentümergeführte Investment- und
+            Bestandsgesellschaft. Investiert wird ausschließlich in Immobilien
+            auf eigene Rechnung und für das eigene Portfolio.
           </p>
           <p
             className="tracking-[-0.02em] leading-[1.55] text-[var(--kc3-black)]/70"
             style={{ fontSize: "clamp(1rem, 1.15vw, 1.1rem)" }}
           >
-            Alle Entscheidungen — von der Standortanalyse über den Ankauf bis
-            zur laufenden Verwaltung — treffen wir aus Eigentümerperspektive.
-            Wir arbeiten ohne externe Investoren und ohne kurzfristige
+            KC3 tritt weder als Makler noch als Dienstleister oder Berater für
+            Dritte auf. Erwerb, Vermietung und Bewirtschaftung erfolgen aus
+            Eigentümerhand, ohne externe Investoren und ohne kurzfristige
             Verwertungslogik.
           </p>
         </div>
@@ -120,23 +120,20 @@ export default function AboutKC3() {
             className="tracking-[-0.02em] leading-[1.45]"
             style={{ fontSize: "clamp(1.1rem, 1.35vw, 1.35rem)" }}
           >
-            Die KC3 GmbH entwickelt und verwaltet Immobilien mit einem klaren
-            Anspruch:{" "}
-            <span className="font-editorial font-normal">
-              Qualität, Substanz und nachhaltige Wertentwicklung.
-            </span>
+            Kapital, das dauerhaft in{" "}
+            <span className="font-light">Substanz gebunden bleibt.</span>
           </p>
           <p className="tracking-[-0.01em] leading-[1.55] text-[var(--kc3-black)]/70">
-            Wir begleiten Projekte von der ersten Idee über die Entwicklung bis
-            zur langfristigen Nutzung — mit dem Blick auf Standort, Substanz
-            und Perspektive.
+            Ziel ist der stetige Aufbau eines eigenen, deutschlandweiten
+            Immobilienportfolios aus Wohn- und Gewerbeobjekten mit einem klaren
+            Horizont über Konjunkturzyklen hinweg.
           </p>
         </div>
       </div>
 
       <div className="hairline text-[var(--kc3-black)] mt-10 md:mt-20" />
 
-      <dl className="mt-8 md:mt-14 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
+      <dl className="mt-8 md:mt-14 grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
         <div className="about-copy flex flex-col gap-2">
           <dt className="marker text-[var(--kc3-muted)]">Geschäftssitz</dt>
           <dd>
@@ -144,7 +141,7 @@ export default function AboutKC3() {
               href={mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="tracking-[-0.02em] leading-[1.5] block hover:text-[var(--kc3-accent)] transition-colors"
+              className="tracking-[-0.02em] leading-[1.5] block hover:text-[var(--kc3-navy)] transition-colors"
               style={{ fontSize: "clamp(1rem, 1.15vw, 1.1rem)" }}
             >
               {company.address.street}
@@ -165,25 +162,14 @@ export default function AboutKC3() {
           </dd>
         </div>
         <div className="about-copy flex flex-col gap-2">
-          <dt className="marker text-[var(--kc3-muted)]">Gegründet</dt>
+          <dt className="marker text-[var(--kc3-muted)]">Tätigkeitsgebiet</dt>
           <dd
             className="tracking-[-0.02em] leading-[1.5]"
             style={{ fontSize: "clamp(1rem, 1.15vw, 1.1rem)" }}
           >
-            {company.founded}
+            Deutschlandweit
             <br />
-            <span className="text-[var(--kc3-muted)]">Kenn, Deutschland</span>
-          </dd>
-        </div>
-        <div className="about-copy flex flex-col gap-2">
-          <dt className="marker text-[var(--kc3-muted)]">Investitionsansatz</dt>
-          <dd
-            className="tracking-[-0.02em] leading-[1.5]"
-            style={{ fontSize: "clamp(1rem, 1.15vw, 1.1rem)" }}
-          >
-            Langfristiger Bestand
-            <br />
-            <span className="text-[var(--kc3-muted)]">Horizont 10+ Jahre</span>
+            <span className="text-[var(--kc3-muted)]">Wohnen und Gewerbe</span>
           </dd>
         </div>
       </dl>
@@ -208,10 +194,10 @@ export default function AboutKC3() {
           }}
         />
         <div className="absolute bottom-6 left-6 marker text-[var(--kc3-ivory)]/85">
-          Substanz · Architektur · Perspektive
+          Bestand · Substanz · Perspektive
         </div>
         <div className="absolute bottom-6 right-6 marker text-[var(--kc3-ivory)]/60">
-          KC3 · Portfolio
+          KC3 · Eigenes Portfolio
         </div>
       </div>
     </section>

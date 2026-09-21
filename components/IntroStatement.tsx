@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { company } from "@/lib/company";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,10 +36,10 @@ export default function IntroStatement() {
     return () => ctx.revert();
   }, []);
 
-  const line1 = "Wir entwickeln Immobilien";
-  const line2 = "nicht für den Moment.";
-  const line3 = "Sondern für ihren";
-  const line4 = "langfristigen Wert.";
+  const line1 = "Wir investieren";
+  const line2 = "in Immobilien.";
+  const line3 = "Und halten sie";
+  const line4 = "im eigenen Bestand.";
 
   const renderWords = (text: string) =>
     text.split(" ").map((w, i) => (
@@ -62,8 +61,8 @@ export default function IntroStatement() {
             <div className="marker text-[var(--kc3-muted)] mb-3">Kapitel</div>
             <a
               href="#leistungen"
-              className="font-editorial font-normal leading-[1.05] text-[var(--kc3-black)]/70 hover:text-[var(--kc3-black)] transition-colors block"
-              style={{ fontSize: "clamp(1.2rem, 1.6vw, 1.6rem)" }}
+              className="font-light tracking-[-0.02em] leading-[1.15] text-[var(--kc3-black)]/70 hover:text-[var(--kc3-black)] transition-colors block"
+              style={{ fontSize: "clamp(1.1rem, 1.5vw, 1.5rem)" }}
             >
               Zu den
               <br />
@@ -80,54 +79,36 @@ export default function IntroStatement() {
             <span className="block">{renderWords(line1)}</span>
             <span className="block">{renderWords(line2)}</span>
             <span className="block mt-6 md:mt-10">
-              <span className="font-editorial font-normal">
-                {renderWords(line3)}
-              </span>
+              <span className="font-light">{renderWords(line3)}</span>
             </span>
-            <span className="block">{renderWords(line4)}</span>
+            <span className="block font-light">{renderWords(line4)}</span>
           </h2>
 
           <div className="mt-14 md:mt-40 grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-12 md:gap-y-16">
-            <div className="col-span-12 md:col-span-5">
+            <div className="col-span-12 md:col-span-6">
               <div className="hairline text-[var(--kc3-black)] mb-8" />
               <p
                 className="tracking-[-0.02em] leading-[1.4] text-[var(--kc3-black)]/85"
                 style={{ fontSize: "clamp(1.1rem, 1.4vw, 1.4rem)" }}
               >
-                Die KC3 GmbH mit Sitz in Kenn steht für nachhaltige
-                Immobilieninvestitionen, professionelle Projektentwicklung und
-                die Wertsteigerung bestehender Immobilien.
+                Die KC3 GmbH mit Sitz in Kenn ist eine deutschlandweit tätige
+                Investment- und Bestandsgesellschaft für Wohn- und
+                Gewerbeimmobilien. Sämtliche Objekte werden auf eigene Rechnung
+                erworben, langfristig gehalten und vermietet.
               </p>
             </div>
 
-            <div className="col-span-12 md:col-span-6 md:col-start-7">
+            <div className="col-span-12 md:col-span-5 md:col-start-8">
               <div className="hairline text-[var(--kc3-black)] mb-8" />
-              <div className="marker text-[var(--kc3-muted)] mb-8">
-                Grundsätze
-              </div>
-              <ul className="flex flex-col gap-8">
-                {company.principles.map((p) => (
-                  <li key={p.n} className="grid grid-cols-12 gap-4">
-                    <span className="col-span-2 md:col-span-1 marker text-[var(--kc3-muted)] pt-1">
-                      {p.n}
-                    </span>
-                    <div className="col-span-10 md:col-span-11">
-                      <div
-                        className="font-medium tracking-[-0.02em] mb-1"
-                        style={{ fontSize: "clamp(1.15rem, 1.4vw, 1.35rem)" }}
-                      >
-                        {p.title}
-                      </div>
-                      <div
-                        className="tracking-[-0.01em] leading-[1.55] text-[var(--kc3-black)]/70"
-                        style={{ fontSize: "clamp(0.95rem, 1.1vw, 1.05rem)" }}
-                      >
-                        {p.body}
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              <p
+                className="tracking-[-0.02em] leading-[1.55] text-[var(--kc3-black)]/70"
+                style={{ fontSize: "clamp(1rem, 1.15vw, 1.1rem)" }}
+              >
+                KC3 tritt weder als Dienstleister noch als Berater für Dritte
+                auf. Investition, Erwerb und Vermietung erfolgen ausschließlich
+                für das eigene Portfolio. Projektentwicklung ergänzt diesen Kern
+                nachrangig und dient der Erweiterung des eigenen Bestands.
+              </p>
             </div>
           </div>
         </div>

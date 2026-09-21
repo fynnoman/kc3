@@ -1,6 +1,11 @@
-import Link from "next/link";
 import { company } from "@/lib/company";
-import { landingPages } from "@/lib/seo";
+
+const sections = [
+  { label: "Leistungen", href: "/#leistungen" },
+  { label: "Ankauf", href: "/#ankauf" },
+  { label: "Unternehmen", href: "/#unternehmen" },
+  { label: "Kontakt", href: "/#kontakt" },
+];
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -79,15 +84,15 @@ export default function Footer() {
           </p>
         </div>
         <ul className="col-span-12 md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
-          {landingPages.map((p) => (
-            <li key={p.path}>
-              <Link
-                href={p.path}
+          {sections.map((s) => (
+            <li key={s.href}>
+              <a
+                href={s.href}
                 className="tracking-[-0.02em] text-[var(--kc3-ivory)]/80 hover:text-[var(--kc3-ivory)] transition-colors"
                 style={{ fontSize: "clamp(0.95rem, 1vw, 1rem)" }}
               >
-                {p.title}
-              </Link>
+                {s.label}
+              </a>
             </li>
           ))}
         </ul>

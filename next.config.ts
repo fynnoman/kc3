@@ -6,6 +6,31 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  async redirects() {
+    return [
+      { source: "/ankaufsprofil", destination: "/#ankauf", permanent: true },
+      {
+        source: "/immobilie-verkaufen",
+        destination: "/#immobilie-verkaufen",
+        permanent: true,
+      },
+      {
+        source: "/mehrfamilienhaus-verkaufen",
+        destination: "/#mehrfamilienhaus-verkaufen",
+        permanent: true,
+      },
+      {
+        source: "/gewerbeimmobilie-verkaufen",
+        destination: "/#gewerbeimmobilie-verkaufen",
+        permanent: true,
+      },
+      {
+        source: "/grundstueck-verkaufen",
+        destination: "/#grundstueck-verkaufen",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

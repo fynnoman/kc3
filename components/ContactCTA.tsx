@@ -69,7 +69,7 @@ export default function ContactCTA() {
       <div className="relative">
         <div className="flex items-baseline justify-between gap-6 cta-fade">
           <span className="marker text-[var(--kc3-ivory)]/60">
-            04 · Kontakt
+            05 · Kontakt
           </span>
           <span className="marker text-[var(--kc3-ivory)]/40 text-right">
             {company.address.city} · Deutschlandweit

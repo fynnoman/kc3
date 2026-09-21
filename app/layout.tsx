@@ -19,9 +19,22 @@ export const viewport: Viewport = {
   themeColor: "#0F1113",
 };
 
-const baseTitle = "KC3 GmbH — Immobilieninvestitionen. Bestand. Perspektive.";
+const baseTitle =
+  "KC3 GmbH · Immobilie, Mehrfamilienhaus, Gewerbe und Grundstück direkt verkaufen";
 const baseDescription =
-  "Die KC3 GmbH ist eine deutschlandweit tätige, eigentümergeführte Investment- und Bestandsgesellschaft für Wohn- und Gewerbeimmobilien. Ankauf, Vermietung und Projektentwicklung auf eigene Rechnung.";
+  "Die KC3 GmbH kauft Wohn- und Gewerbeimmobilien sowie Mehrfamilienhäuser, Gewerbeobjekte und Grundstücke deutschlandweit auf eigene Rechnung für den langfristigen eigenen Bestand. Direktankauf, kein Makler, kein Bieterverfahren, ein Ansprechpartner.";
+const keywords = [
+  "Immobilie verkaufen",
+  "Mehrfamilienhaus verkaufen",
+  "Gewerbeimmobilie verkaufen",
+  "Grundstück verkaufen",
+  "Direktankauf Immobilien",
+  "Immobilie ohne Makler verkaufen",
+  "Zinshaus verkaufen",
+  "Wohn- und Geschäftshaus verkaufen",
+  "Immobilienbestandshalter",
+  "KC3 GmbH",
+];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -30,6 +43,7 @@ export const metadata: Metadata = {
     template: "%s | KC3 GmbH",
   },
   description: baseDescription,
+  keywords,
   applicationName: "KC3 GmbH",
   authors: [{ name: "KC3 GmbH" }],
   creator: "KC3 GmbH",

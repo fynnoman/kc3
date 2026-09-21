@@ -80,8 +80,7 @@ export const expertise: Expertise[] = [
       { label: "Bestand", value: "Ausschließlich eigene Objekte" },
       { label: "Horizont", value: "Langfristige Vermietung" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=85&w=2000&auto=format&fit=crop",
+    image: "/expertise/vermietung.png",
   },
   {
     index: "03",

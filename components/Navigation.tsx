@@ -3,9 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const links = [
-  { label: "Leistungen", href: "#leistungen" },
-  { label: "Unternehmen", href: "#unternehmen" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: "Leistungen", href: "/#leistungen" },
+  { label: "Ankauf", href: "/ankaufsprofil" },
+  { label: "Unternehmen", href: "/#unternehmen" },
+  { label: "Kontakt", href: "/#kontakt" },
 ];
 
 export default function Navigation() {

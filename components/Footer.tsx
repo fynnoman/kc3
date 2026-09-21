@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { company } from "@/lib/company";
+import { landingPages } from "@/lib/seo";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -57,12 +59,38 @@ export default function Footer() {
           >
             <a
               href={`mailto:${company.contact.email}`}
-              className="hover:text-[var(--kc3-ivory)] block"
+              className="hover:text-[var(--kc3-ivory)] block break-all"
             >
               {company.contact.email}
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="mt-12 md:mt-16 pt-8 border-t border-white/10 grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-6">
+        <div className="col-span-12 md:col-span-4">
+          <div className="marker text-[var(--kc3-ivory)]/50 mb-3">Ankauf</div>
+          <p
+            className="tracking-[-0.02em] leading-[1.5] text-[var(--kc3-ivory)]/70 max-w-xs"
+            style={{ fontSize: "clamp(0.9rem, 0.95vw, 0.95rem)" }}
+          >
+            Direktankauf durch die KC3 GmbH auf eigene Rechnung. Deutschlandweit,
+            ohne Vermittlung.
+          </p>
+        </div>
+        <ul className="col-span-12 md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
+          {landingPages.map((p) => (
+            <li key={p.path}>
+              <Link
+                href={p.path}
+                className="tracking-[-0.02em] text-[var(--kc3-ivory)]/80 hover:text-[var(--kc3-ivory)] transition-colors"
+                style={{ fontSize: "clamp(0.95rem, 1vw, 1rem)" }}
+              >
+                {p.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="mt-12 md:mt-16 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-4">

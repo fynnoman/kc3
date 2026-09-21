@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const HERO_IMAGES = [
-  "/hero/hero-1.png",
-  "/hero/hero-2.png",
-  "/hero/hero-3.png",
+  "/hero/hero-1.webp",
+  "/hero/hero-2.webp",
+  "/hero/hero-3.webp",
 ];
 
 export default function Hero() {

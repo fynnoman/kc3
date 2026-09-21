@@ -7,13 +7,12 @@ import {
   BulletList,
   ContentSection,
   FaqList,
-  OrderedSteps,
 } from "@/components/LandingSections";
-import { ablauf, ankaufFaq, ankaufKategorien } from "@/lib/ankauf";
+import { investmentFaq, investmentKategorien } from "@/lib/investment";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function AnkaufSection() {
+export default function InvestmentSection() {
   const root = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,7 +22,7 @@ export default function AnkaufSection() {
 
     const ctx = gsap.context(() => {
       gsap.fromTo(
-        ".ankauf-title > span > span",
+        ".investment-title > span > span",
         { yPercent: 120 },
         {
           yPercent: 0,
@@ -38,7 +37,7 @@ export default function AnkaufSection() {
       );
 
       gsap.fromTo(
-        ".ankauf-copy",
+        ".investment-copy",
         { opacity: 0, y: 24 },
         {
           opacity: 1,
@@ -58,69 +57,69 @@ export default function AnkaufSection() {
   }, []);
 
   return (
-    <div id="ankauf" ref={root}>
+    <div id="investment" ref={root}>
       <section
         className="relative bg-[var(--kc3-ivory)] text-[var(--kc3-black)] overflow-hidden"
         style={{ padding: "clamp(60px, 8vw, 120px) var(--page-padding) 0" }}
       >
-        <div className="marker text-[var(--kc3-muted)] ankauf-copy">
-          03 · Ankauf
+        <div className="marker text-[var(--kc3-muted)] investment-copy">
+          03 · Investmentansatz
         </div>
 
         <h2
-          className="ankauf-title font-medium tracking-[-0.05em] md:tracking-[-0.06em] leading-[0.88] md:leading-[0.86]"
+          className="investment-title font-medium tracking-[-0.05em] md:tracking-[-0.06em] leading-[0.88] md:leading-[0.86]"
           style={{ fontSize: "clamp(2.8rem, 11vw, 10rem)", marginTop: "-0.2em" }}
         >
           <span className="reveal-line block">
-            <span>Direktankauf.</span>
+            <span>Kapital in Substanz.</span>
           </span>
           <span className="reveal-line block">
-            <span className="font-light">Auf eigene Rechnung.</span>
+            <span className="font-light">Auf lange Sicht.</span>
           </span>
         </h2>
 
-        <div className="hairline text-[var(--kc3-black)] mt-10 md:mt-20 ankauf-copy" />
+        <div className="hairline text-[var(--kc3-black)] mt-10 md:mt-20 investment-copy" />
 
         <div className="mt-8 md:mt-16 grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-10 md:gap-y-14 items-start pb-16 md:pb-24">
-          <div className="ankauf-copy col-span-12 md:col-span-6 flex flex-col gap-8 max-w-xl">
-            <div className="marker text-[var(--kc3-muted)]">Rolle</div>
+          <div className="investment-copy col-span-12 md:col-span-6 flex flex-col gap-8 max-w-xl">
+            <div className="marker text-[var(--kc3-muted)]">Ansatz</div>
             <p
               className="tracking-[-0.02em] leading-[1.5] text-[var(--kc3-black)]/85"
               style={{ fontSize: "clamp(1.15rem, 1.5vw, 1.5rem)" }}
             >
-              KC3 ist Käufer und Bestandshalter in Personalunion. Wohn- und
-              Gewerbeimmobilien werden deutschlandweit auf eigene Rechnung
-              erworben, in den eigenen Bestand überführt und langfristig
-              vermietet.
+              Die KC3 GmbH investiert eigenes Kapital in Wohn- und
+              Gewerbeimmobilien deutschlandweit. Erwerb, Bestand und Vermietung
+              erfolgen aus einer Hand.
             </p>
             <p
               className="tracking-[-0.02em] leading-[1.55] text-[var(--kc3-black)]/70"
               style={{ fontSize: "clamp(1rem, 1.15vw, 1.1rem)" }}
             >
-              Es gibt keinen Maklervertrag, keine Provision und keine
-              Weiterveräußerung. Ansprechpartner ist die KC3 GmbH selbst.
+              Kein externer Investor, keine Fondsstruktur, keine kurzfristige
+              Verwertung. Ein direkter, verbindlicher Ansprechpartner in der
+              Gesellschaft.
             </p>
           </div>
 
-          <div className="ankauf-copy col-span-12 md:col-span-5 md:col-start-8 flex flex-col gap-8">
-            <div className="marker text-[var(--kc3-muted)]">Prinzip</div>
+          <div className="investment-copy col-span-12 md:col-span-5 md:col-start-8 flex flex-col gap-8">
+            <div className="marker text-[var(--kc3-muted)]">Horizont</div>
             <p
               className="tracking-[-0.02em] leading-[1.45]"
               style={{ fontSize: "clamp(1.1rem, 1.35vw, 1.35rem)" }}
             >
-              Ankauf, Bestand und Vermietung{" "}
-              <span className="font-light">aus einer Hand.</span>
+              Substanzwerte statt spekulativer{" "}
+              <span className="font-light">Renditelogik.</span>
             </p>
             <p className="tracking-[-0.01em] leading-[1.55] text-[var(--kc3-black)]/70">
-              Eigenkapital, kein externer Investor. Kein Bieterverfahren, keine
-              breit gestreute Vermarktung. Ein direkter, verbindlicher
-              Ansprechpartner für die Verkäuferseite.
+              Ziel ist der stetige Aufbau eines eigenen, deutschlandweiten
+              Immobilienportfolios aus Wohn- und Gewerbeobjekten über
+              Konjunkturzyklen hinweg.
             </p>
           </div>
         </div>
       </section>
 
-      {ankaufKategorien.map((k) => (
+      {investmentKategorien.map((k) => (
         <div key={k.anchor} id={k.anchor} className="scroll-mt-24">
           <ContentSection
             eyebrow={k.eyebrow}
@@ -133,18 +132,10 @@ export default function AnkaufSection() {
       ))}
 
       <ContentSection
-        eyebrow="03.5 · Ablauf"
-        title="Vom Angebot bis zur Übernahme."
-        intro="Der Prozess bleibt schlank. Kein Bieterverfahren, keine Vermittlungsstufe, ein Ansprechpartner."
+        eyebrow="03.5 · Häufige Fragen"
+        title="Fragen zum Investmentansatz."
       >
-        <OrderedSteps items={ablauf} />
-      </ContentSection>
-
-      <ContentSection
-        eyebrow="03.6 · Häufige Fragen"
-        title="Fragen zum Direktankauf."
-      >
-        <FaqList items={ankaufFaq} />
+        <FaqList items={investmentFaq} />
       </ContentSection>
     </div>
   );

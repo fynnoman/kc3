@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   async redirects() {
     return [
-      { source: "/ankaufsprofil", destination: "/#ankauf", permanent: true },
+      { source: "/ankaufsprofil", destination: "/#investment", permanent: true },
       {
         source: "/immobilie-verkaufen",
         destination: "/#immobilie-verkaufen",

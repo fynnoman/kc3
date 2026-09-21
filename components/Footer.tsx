@@ -2,7 +2,7 @@ import { company } from "@/lib/company";
 
 const sections = [
   { label: "Leistungen", href: "/#leistungen" },
-  { label: "Ankauf", href: "/#ankauf" },
+  { label: "Investment", href: "/#investment" },
   { label: "Unternehmen", href: "/#unternehmen" },
   { label: "Kontakt", href: "/#kontakt" },
 ];
@@ -74,13 +74,13 @@ export default function Footer() {
 
       <div className="mt-12 md:mt-16 pt-8 border-t border-white/10 grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-6">
         <div className="col-span-12 md:col-span-4">
-          <div className="marker text-[var(--kc3-ivory)]/50 mb-3">Ankauf</div>
+          <div className="marker text-[var(--kc3-ivory)]/50 mb-3">Investment</div>
           <p
             className="tracking-[-0.02em] leading-[1.5] text-[var(--kc3-ivory)]/70 max-w-xs"
             style={{ fontSize: "clamp(0.9rem, 0.95vw, 0.95rem)" }}
           >
-            Direktankauf durch die KC3 GmbH auf eigene Rechnung. Deutschlandweit,
-            ohne Vermittlung.
+            Investment in Wohn- und Gewerbeimmobilien durch die KC3 GmbH auf
+            eigene Rechnung. Deutschlandweit, ohne Vermittlung.
           </p>
         </div>
         <ul className="col-span-12 md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">

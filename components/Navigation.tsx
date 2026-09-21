@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const links = [
   { label: "Leistungen", href: "/#leistungen" },
-  { label: "Ankauf", href: "/#ankauf" },
+  { label: "Investment", href: "/#investment" },
   { label: "Unternehmen", href: "/#unternehmen" },
   { label: "Kontakt", href: "/#kontakt" },
 ];
@@ -43,7 +43,8 @@ export default function Navigation() {
           style={{ padding: "clamp(16px, 2.4vw, 22px) var(--page-padding)" }}
         >
           <a
-            href="#top"
+            href="/"
+            onClick={() => setOpen(false)}
             className={`inline-flex items-baseline gap-2 leading-none transition-colors ${
               scrolled || open ? "text-[var(--kc3-black)]" : "text-[var(--kc3-ivory)]"
             }`}

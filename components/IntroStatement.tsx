@@ -36,10 +36,9 @@ export default function IntroStatement() {
     return () => ctx.revert();
   }, []);
 
-  const line1 = "Immobilien-";
-  const line2 = "investitionen.";
-  const line3 = "Wohnen und";
-  const line4 = "Gewerbe.";
+  const headingPart1 = "Immobilieninvestitionen in Wohn- und Gewerbeimmobilien";
+  const headingPart2 =
+    "sowie die Projektentwicklung von Neubau- und Renovierungsprojekten.";
 
   const renderWords = (text: string) =>
     text.split(" ").map((w, i) => (
@@ -62,15 +61,13 @@ export default function IntroStatement() {
 
         <div className="col-span-12 md:col-span-10">
           <h2
-            className="font-medium tracking-[-0.045em] md:tracking-[-0.055em] leading-[1] md:leading-[0.94]"
-            style={{ fontSize: "clamp(2.1rem, 6.8vw, 7rem)" }}
+            className="font-medium tracking-[-0.035em] md:tracking-[-0.045em] leading-[1.05] md:leading-[1]"
+            style={{ fontSize: "clamp(1.75rem, 4.8vw, 4.6rem)" }}
           >
-            <span className="block">{renderWords(line1)}</span>
-            <span className="block">{renderWords(line2)}</span>
-            <span className="block mt-6 md:mt-10">
-              <span className="font-light">{renderWords(line3)}</span>
+            <span className="block">{renderWords(headingPart1)}</span>
+            <span className="block font-light mt-6 md:mt-10">
+              {renderWords(headingPart2)}
             </span>
-            <span className="block font-light">{renderWords(line4)}</span>
           </h2>
 
           <div className="mt-14 md:mt-40 grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-12 md:gap-y-16">

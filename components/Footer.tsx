@@ -1,12 +1,5 @@
 import { company } from "@/lib/company";
 
-const sections = [
-  { label: "Leistungen", href: "/#leistungen" },
-  { label: "Investment", href: "/#investment" },
-  { label: "Unternehmen", href: "/#unternehmen" },
-  { label: "Kontakt", href: "/#kontakt" },
-];
-
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -73,29 +66,15 @@ export default function Footer() {
       </div>
 
       <div className="mt-12 md:mt-16 pt-8 border-t border-white/10 grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-6">
-        <div className="col-span-12 md:col-span-4">
-          <div className="marker text-[var(--kc3-ivory)]/50 mb-3">Investment</div>
+        <div className="col-span-12 md:col-span-6">
+          <div className="marker text-[var(--kc3-ivory)]/50 mb-3">Register</div>
           <p
-            className="tracking-[-0.02em] leading-[1.5] text-[var(--kc3-ivory)]/70 max-w-xs"
+            className="tracking-[-0.02em] leading-[1.5] text-[var(--kc3-ivory)]/70 max-w-md"
             style={{ fontSize: "clamp(0.9rem, 0.95vw, 0.95rem)" }}
           >
-            Investment in Wohn- und Gewerbeimmobilien durch die KC3 GmbH auf
-            eigene Rechnung. Deutschlandweit, ohne Vermittlung.
+            Amtsgericht Wittlich · HRB 47043
           </p>
         </div>
-        <ul className="col-span-12 md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
-          {sections.map((s) => (
-            <li key={s.href}>
-              <a
-                href={s.href}
-                className="tracking-[-0.02em] text-[var(--kc3-ivory)]/80 hover:text-[var(--kc3-ivory)] transition-colors"
-                style={{ fontSize: "clamp(0.95rem, 1vw, 1rem)" }}
-              >
-                {s.label}
-              </a>
-            </li>
-          ))}
-        </ul>
       </div>
 
       <div className="mt-12 md:mt-16 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-4">
@@ -117,7 +96,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="marker text-[var(--kc3-ivory)]/40">
-          Deutschlandweit
+          Kenn · Deutschland
         </div>
       </div>
     </footer>

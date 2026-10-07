@@ -19,7 +19,7 @@ export default function Hero() {
 
     const id = window.setInterval(() => {
       setActiveImage((i) => (i + 1) % HERO_IMAGES.length);
-    }, 6000);
+    }, 4800);
 
     return () => window.clearInterval(id);
   }, []);
@@ -130,7 +130,7 @@ export default function Hero() {
             KC3 GmbH · Kenn, Deutschland
           </span>
           <span className="marker text-[var(--kc3-ivory)]/70 hidden md:inline">
-            Deutschlandweit tätig
+            HRB 47043 · Amtsgericht Wittlich
           </span>
         </div>
 
@@ -154,10 +154,7 @@ export default function Hero() {
         <div className="flex flex-col gap-4 md:gap-6">
           <div className="hairline text-[var(--kc3-ivory)] hero-meta" />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
-            <a
-              href="#leistungen"
-              className="hero-meta group transition-colors hover:text-[var(--kc3-ivory)]"
-            >
+            <div className="hero-meta">
               <div className="marker text-[var(--kc3-ivory)]/60 mb-2">
                 Tätigkeit
               </div>
@@ -165,16 +162,13 @@ export default function Hero() {
                 className="tracking-[-0.02em] leading-[1.35]"
                 style={{ fontSize: "clamp(0.95rem, 1.15vw, 1.1rem)" }}
               >
-                Immobilieninvestitionen
+                Kauf und Verkauf
                 <br />
-                Vermietung eigener Objekte
+                eigener Immobilien
               </div>
-            </a>
+            </div>
 
-            <a
-              href="#unternehmen"
-              className="hero-meta group transition-colors hover:text-[var(--kc3-ivory)]"
-            >
+            <div className="hero-meta">
               <div className="marker text-[var(--kc3-ivory)]/60 mb-2">
                 Unternehmen
               </div>
@@ -184,16 +178,16 @@ export default function Hero() {
               >
                 KC3 GmbH
                 <br />
-                Eigentümergeführt
+                Sitz Kenn
               </div>
-            </a>
+            </div>
 
             <a
-              href="#kontakt"
+              href="#selbstverstaendnis"
               className="hero-meta group transition-colors hover:text-[var(--kc3-ivory)]"
             >
               <div className="marker text-[var(--kc3-ivory)]/60 mb-2">
-                Kontakt
+                Mehr
               </div>
               <div
                 className="tracking-[-0.02em] leading-[1.35]"

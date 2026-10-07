@@ -94,6 +94,12 @@ export default function Footer() {
           >
             Datenschutz
           </a>
+          <a
+            href="/datenschutz#cookies"
+            className="marker text-[var(--kc3-ivory)]/60 hover:text-[var(--kc3-ivory)] transition-colors"
+          >
+            Cookies
+          </a>
         </div>
         <div className="marker text-[var(--kc3-ivory)]/40">
           Kenn · Deutschland

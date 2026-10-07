@@ -36,8 +36,8 @@ export default function IntroStatement() {
     return () => ctx.revert();
   }, []);
 
-  const line1 = "Kauf und Verkauf";
-  const line2 = "eigener Immobilien.";
+  const line1 = "Immobilien-";
+  const line2 = "investitionen.";
   const line3 = "Wohnen und";
   const line4 = "Gewerbe.";
 
@@ -80,9 +80,9 @@ export default function IntroStatement() {
                 className="tracking-[-0.02em] leading-[1.4] text-[var(--kc3-black)]/85"
                 style={{ fontSize: "clamp(1.1rem, 1.4vw, 1.4rem)" }}
               >
-                Die KC3 GmbH mit Sitz in Kenn ist auf den Kauf und Verkauf
-                eigener Wohngrundstücke, Wohngebäude, Gewerbeobjekte und
-                Wohnungen ausgerichtet.
+                Die KC3 GmbH mit Sitz in Kenn ist auf Immobilieninvestitionen
+                in Wohngrundstücke, Wohngebäude, Gewerbeobjekte und Wohnungen
+                ausgerichtet.
               </p>
             </div>
 

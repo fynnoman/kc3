@@ -52,6 +52,19 @@ export default function DatenschutzPage() {
             </p>
           </section>
 
+          <section id="cookies">
+            <div className="marker text-[var(--kc3-muted)] mb-2">Cookies</div>
+            <p>
+              Diese Website verwendet ausschließlich technisch notwendige
+              Cookies, die für den Betrieb der Seite erforderlich sind. Es
+              werden keine Analyse-, Marketing- oder Tracking-Cookies
+              eingesetzt. Ein einmaliger Hinweisbanner speichert lediglich
+              Ihre Kenntnisnahme lokal in Ihrem Browser (localStorage), damit
+              der Hinweis bei weiteren Besuchen nicht erneut erscheint. Diese
+              Information verlässt Ihr Gerät nicht.
+            </p>
+          </section>
+
           <section>
             <div className="marker text-[var(--kc3-muted)] mb-2">
               Ihre Rechte

@@ -162,9 +162,7 @@ export default function Hero() {
                 className="tracking-[-0.02em] leading-[1.35]"
                 style={{ fontSize: "clamp(0.95rem, 1.15vw, 1.1rem)" }}
               >
-                Kauf und Verkauf
-                <br />
-                eigener Immobilien
+                Immobilieninvestitionen
               </div>
             </div>
 

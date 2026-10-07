@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import CookieBanner from "@/components/CookieBanner";
 import JsonLd from "@/components/JsonLd";
 import { SITE_URL, organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 
@@ -104,6 +105,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body>
         <Navigation />
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

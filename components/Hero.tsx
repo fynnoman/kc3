@@ -127,7 +127,7 @@ export default function Hero() {
       >
         <div className="flex items-start justify-between gap-4 hero-marker">
           <span className="marker text-[var(--kc3-ivory)]/70">
-            KC3 GmbH · Kenn, Deutschland
+            KC3 GmbH
           </span>
           <span className="marker text-[var(--kc3-ivory)]/70 hidden md:inline">
             HRB 47043 · Amtsgericht Wittlich
@@ -175,8 +175,6 @@ export default function Hero() {
                 style={{ fontSize: "clamp(0.95rem, 1.15vw, 1.1rem)" }}
               >
                 KC3 GmbH
-                <br />
-                Sitz Kenn
               </div>
             </div>
 

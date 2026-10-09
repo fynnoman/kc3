@@ -77,7 +77,7 @@ export default function IntroStatement() {
                 className="tracking-[-0.02em] leading-[1.4] text-[var(--kc3-black)]/85"
                 style={{ fontSize: "clamp(1.1rem, 1.4vw, 1.4rem)" }}
               >
-                Die KC3 GmbH mit Sitz in Kenn ist auf Immobilieninvestitionen
+                Die KC3 GmbH ist auf Immobilieninvestitionen
                 in Wohngrundstücke, Wohngebäude, Gewerbeobjekte und Wohnungen
                 ausgerichtet.
               </p>

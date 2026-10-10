@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const links = [
@@ -42,26 +43,18 @@ export default function Navigation() {
           <a
             href="/"
             onClick={() => setOpen(false)}
-            className={`inline-flex items-baseline gap-2 leading-none transition-colors ${
-              scrolled || open ? "text-[var(--kc3-black)]" : "text-[var(--kc3-ivory)]"
-            }`}
+            aria-label="KC3 GmbH"
+            className="inline-flex items-center leading-none"
           >
-            <span
-              className="font-medium tracking-[-0.04em]"
-              style={{ fontSize: "clamp(1.4rem, 1.9vw, 1.8rem)" }}
-            >
-              KC3
-            </span>
-            <span
-              className="marker"
-              style={{
-                color: "var(--kc3-navy)",
-                fontSize: "clamp(0.7rem, 0.8vw, 0.8rem)",
-                letterSpacing: "0.22em",
-              }}
-            >
-              GmbH
-            </span>
+            <Image
+              src="/kc3-logo.png"
+              alt="KC3 GmbH"
+              width={1254}
+              height={564}
+              priority
+              className="w-auto"
+              style={{ height: "clamp(34px, 3.6vw, 46px)" }}
+            />
           </a>
 
           <nav className="hidden md:flex items-center gap-10">

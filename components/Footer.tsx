@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { company } from "@/lib/company";
 
 export default function Footer() {
@@ -12,23 +14,15 @@ export default function Footer() {
     >
       <div className="grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-10 items-start">
         <div className="col-span-12 md:col-span-4">
-          <div className="inline-flex items-baseline gap-3 leading-none">
-            <span
-              className="font-medium tracking-[-0.05em]"
-              style={{ fontSize: "clamp(3rem, 4.6vw, 4.4rem)" }}
-            >
-              {company.short}
-            </span>
-            <span
-              className="marker"
-              style={{
-                color: "var(--kc3-navy)",
-                fontSize: "clamp(0.8rem, 0.95vw, 1rem)",
-                letterSpacing: "0.22em",
-              }}
-            >
-              GmbH
-            </span>
+          <div className="inline-flex items-center leading-none">
+            <Image
+              src="/kc3-logo.png"
+              alt="KC3 GmbH"
+              width={1254}
+              height={564}
+              className="w-auto"
+              style={{ height: "clamp(80px, 7.2vw, 112px)" }}
+            />
           </div>
           <div className="marker text-[var(--kc3-ivory)]/50 mt-3">
             {company.tagline}

@@ -3,9 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 
 const links = [
-  { label: "Leistungen", href: "/#leistungen" },
-  { label: "Investment", href: "/#investment" },
-  { label: "Unternehmen", href: "/#unternehmen" },
   { label: "Kontakt", href: "/#kontakt" },
 ];
 
@@ -50,8 +47,8 @@ export default function Navigation() {
             }`}
           >
             <span
-              className="marker"
-              style={{ fontSize: "clamp(0.8rem, 1vw, 0.9rem)" }}
+              className="font-medium tracking-[-0.04em]"
+              style={{ fontSize: "clamp(1.4rem, 1.9vw, 1.8rem)" }}
             >
               KC3
             </span>
@@ -59,7 +56,7 @@ export default function Navigation() {
               className="marker"
               style={{
                 color: "var(--kc3-navy)",
-                fontSize: "0.55rem",
+                fontSize: "clamp(0.7rem, 0.8vw, 0.8rem)",
                 letterSpacing: "0.22em",
               }}
             >

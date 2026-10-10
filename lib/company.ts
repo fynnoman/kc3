@@ -14,7 +14,7 @@ export const company = {
   },
 
   contact: {
-    email: "kontakt@kc3-gmbh.de",
+    email: "info@kc3gmbh.de",
   },
 
   management: {

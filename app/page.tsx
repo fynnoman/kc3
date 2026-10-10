@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import IntroStatement from "@/components/IntroStatement";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main>
       <Hero />
       <IntroStatement />
+      <ContactSection />
       <Footer />
     </main>
   );

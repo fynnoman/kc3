@@ -1,7 +1,7 @@
 import { company } from "@/lib/company";
 
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://kc3-gmbh.de"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://kc3gmbh.de"
 ).replace(/\/$/, "");
 
 export const absoluteUrl = (path: string = "/") =>

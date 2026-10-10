@@ -12,10 +12,10 @@ export default function Footer() {
     >
       <div className="grid grid-cols-12 gap-x-[clamp(16px,2vw,32px)] gap-y-10 items-start">
         <div className="col-span-12 md:col-span-4">
-          <div className="inline-flex items-baseline gap-2 leading-none">
+          <div className="inline-flex items-baseline gap-3 leading-none">
             <span
               className="font-medium tracking-[-0.05em]"
-              style={{ fontSize: "clamp(1.6rem, 2vw, 1.9rem)" }}
+              style={{ fontSize: "clamp(3rem, 4.6vw, 4.4rem)" }}
             >
               {company.short}
             </span>
@@ -23,7 +23,7 @@ export default function Footer() {
               className="marker"
               style={{
                 color: "var(--kc3-navy)",
-                fontSize: "0.6rem",
+                fontSize: "clamp(0.8rem, 0.95vw, 1rem)",
                 letterSpacing: "0.22em",
               }}
             >

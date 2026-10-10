@@ -125,10 +125,7 @@ export default function Hero() {
             "clamp(88px, 14vw, 140px) var(--page-padding) clamp(28px, 5vw, 48px)",
         }}
       >
-        <div className="flex items-start justify-between gap-4 hero-marker">
-          <span className="marker text-[var(--kc3-ivory)]/70">
-            KC3 GmbH
-          </span>
+        <div className="flex items-start justify-end gap-4 hero-marker">
           <span className="marker text-[var(--kc3-ivory)]/70 hidden md:inline">
             HRB 47043 · Amtsgericht Wittlich
           </span>
